@@ -1,7 +1,8 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.0'
-
+gem 'rails', '~>3.0'
+gem "mongoid", "~>2.0"
+gem "bson_ext", "~>1.1"
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -27,3 +28,6 @@ gem 'rails', '3.0.0'
 # group :development, :test do
 #   gem 'webrat'
 # end
+#group :test do
+#  gem 'capybara', :git => 'http://github.com/jnicklas/capybara.git', :ref => '89d00c4f0801a1d00f57'  ÷
+#end

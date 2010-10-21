@@ -1,0 +1,19 @@
+<h3>Edit Golf Course</h3>
+
+<%= form_for @golf_course do |f| %>
+
+  <ul>
+    <li><%= f.label :name, 'Name' %>: <%= f.text_field :name %></li>
+      <% @golf_course.holes.each do |hole| %>
+      <li>
+        <%= fields_for_hole(hole) do |hf| %>
+          <%= hf.label :par, "Hole #{hole.number} par"%>:
+          <%= hf.text_field :par %>
+          <%= hf.hidden_field :number %>
+          <%= hf.hidden_field :id %>
+      </li>
+        <%end%>
+      <% end %>
+  </ul>
+  <%= f.submit %>
+<% end %>
